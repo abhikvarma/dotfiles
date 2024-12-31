@@ -1,0 +1,22 @@
+set ideajoin
+set sneak
+set NERDTree
+set surround
+set commentary
+set argtextobj
+set textobj-entire
+set functiontextobj
+set highlightedyank
+set exchange
+
+map <leader>md <Action>(NewDir)
+map <leader>mf <Action>(NewElement)
+map <leader>rf <Action>(RenameFile)
+map <leader>gf <Action>(SelectInProjectView)
+map <leader>cc <Action>(CloseContent)
+map <leader>rb <Action>(Vcs.RollbackChangedLines)
+map <leader>ge <Action>(Gradle.ExecuteTask)
+map <S-Space> <Action>(GotoNextError)
+map <leader>sH <Action>(SplitHorizontally)
+map <leader>sV <Action>(SplitVertically)
+map <leader>co <Action>(CloseAllEditorsButActive)
