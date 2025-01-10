@@ -1,3 +1,4 @@
+set scrolloff=10
 set ideajoin
 set sneak
 set NERDTree
@@ -9,14 +10,43 @@ set functiontextob " install Vim FunctionTextObj plugin https://plugins.jetbrain
 set highlightedyank
 set exchange
 
+" search improvements
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch!
+
+" Key mappings
+inoremap jk <Esc>
+nnoremap <A-n> :tabnext<CR>
+nnoremap <A-p> :tabprev<CR>
+nnoremap <A-h> <C-w>h
+nnoremap <A-l> <C-w>l
+nnoremap <A-k> <C-w>k
+nnoremap <A-j> <C-w>j
+nnoremap [[ <Action>(MethodUp)
+nnoremap ]] <Action>(MethodDown)
+inoremap <C-j> <Action>(PopupMenu-selectNext)
+inoremap <C-k> <Action>(PopupMenu-selectPrev)
+
+" leader commands
 map <leader>md <Action>(NewDir)
 map <leader>mf <Action>(NewElement)
 map <leader>rf <Action>(RenameFile)
 map <leader>gf <Action>(SelectInProjectView)
-map <leader>cc <Action>(CloseContent)
+map <leader>q <Action>(CloseContent)
 map <leader>rb <Action>(Vcs.RollbackChangedLines)
 map <leader>ge <Action>(Gradle.ExecuteTask)
 map <S-Space> <Action>(GotoNextError)
-map <leader>sH <Action>(SplitHorizontally)
-map <leader>sV <Action>(SplitVertically)
+map <leader>wv <Action>(SplitVertically)
+map <leader>wh <Action>(SplitHorizontally)
+map <leader>wu <Action>(Unsplit)
+map <leader>wm <Action>(MoveEditorToOppositeTabGroup)
 map <leader>co <Action>(CloseAllEditorsButActive)
+map <leader>rc <Action>(RunCoverage)
+map <leader>dd <action>(ToggleDistractionFreeMode)
+map <leader>x :NERDTreeToggle<CR>
+map <leader>rs <Action>(ChangeSignature)
+map <leader>rr <Action>(Refactorings.QuickListPopupAction)
+map <leader>t <Action>(RunClass)
+map <leader>d <Action>(DebugClass)
